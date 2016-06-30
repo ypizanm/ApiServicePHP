@@ -137,6 +137,24 @@ public function registrarRetiro($cuenta,$importe,$clave,$empleado) {
         
         return $estado;
     }
+    
+    public function registrarSucursal($nombre,$ciudad,$direccion) {
+        $estado = 'hola';
+        
+        try {
+            $stm = $this->pdo->prepare("call usp_registro_sucursal(?,?,?)");
+            $stm->bindParam(1, $nombre);
+            $stm->bindParam(2, $ciudad);
+            $stm->bindParam(3, $direccion);
+            // llamar al procedimiento almacenado
+            $stm->execute();
+            $estado = $stm->fetch(PDO::FETCH_ASSOC);
+        } catch (Exception $e) {
+            throw $e;
+        }
+        
+        return $estado;
+    }
 	
 }
 ?>
