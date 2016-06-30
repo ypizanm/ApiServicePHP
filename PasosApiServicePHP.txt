@@ -1,0 +1,33 @@
+Henry  Mendoza Puerta
+====================
+1.- branch: master
+    =============
+    - Crear archivo de configuracion conf
+      ;Parámetros para la conexión
+	[database]
+	01="mysql:host=localhost:3306;dbname=upaobank"
+	02=root
+	03=admin
+     -Implementacion de MyPDO, para hacer 
+      referencia a los parametros del
+      archivo conf.
+
+2.- branch : s1dao
+    ===============
+    - Se adjunta la carpeta BD donde se encuentran
+     los script de para crear la BD, poblar de datos
+     las tablas, y de los procedimientos almacenados.
+
+    -Implementacion de metodos de acceso a datos
+     iniciarSesion,consultarCliente,consultarMovimientos,
+     registrarDeposito y registrarRetiro.
+
+3.- branch : s1service
+    ==================
+    - Implementacion de los service ConsultarCliente.php,
+      ConsultarMovimiento.php,login.php,RegistrarDeposito.php,
+      y registrarRetiro.php. Los cuales retornar formato JSON.
+
+    
+
+   
